@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Generated Document - LegalEase{% endblock %}
+{% block content %}
+<section class="card"><h2>{{ document_type }}</h2><p><strong>Prepared for:</strong> {{ name }}</p></section>
+<section class="card"><h3>Generated Draft</h3><pre>{{ document }}</pre></section>
+<section class="notice">This is an educational draft and may not satisfy legal requirements in your jurisdiction. Consult a qualified legal professional before relying on it.</section>
+<a class="button" href="/">Create Another Document</a>
+{% endblock %}

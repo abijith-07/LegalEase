@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}LegalEase - Home{% endblock %}
+{% block content %}
+<section class="card">
+<h2>Create a Legal Document Draft</h2>
+<p>Enter basic information to generate a structured educational draft.</p>
+<form method="post" action="/generate">
+<label>Document Type</label>
+<select name="document_type" required>
+<option>Leave Request</option>
+<option>Rental Agreement Draft</option>
+<option>Complaint Letter</option>
+<option>Affidavit Draft</option>
+</select>
+<label>Your Name</label>
+<input type="text" name="name" required placeholder="Enter your name">
+<label>Details</label>
+<textarea name="details" rows="8" required placeholder="Describe relevant facts, dates, parties and purpose..."></textarea>
+<button type="submit">Generate Document</button>
+</form>
+</section>
+<section class="notice"><strong>Important:</strong> LegalEase creates educational drafts. Have a qualified legal professional review any document before official use.</section>
+{% endblock %}
